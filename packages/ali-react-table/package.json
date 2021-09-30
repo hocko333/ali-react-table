@@ -1,6 +1,6 @@
 {
-  "name": "react-magic-table",
-  "version": "2.6.1",
+  "name": "react-magic-tables",
+  "version": "2.6.3",
   "description": "高性能 React 表格组件（基于 ali-react-table）",
   "sideEffects": false,
   "module": "dist/ali-react-table.esm.js",
