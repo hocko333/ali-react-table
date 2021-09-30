@@ -1,8 +1,9 @@
-# ali-react-table
+# react-magic-table
 
 [![NPM Package](https://img.shields.io/npm/v/ali-react-table?style=flat-square)](https://www.npmjs.org/package/ali-react-table)
 
-高性能 React 表格组件. https://ali-react-table.js.org/
+- 高性能 React 表格组件. https://ali-react-table.js.org/（基于 ali-react-table）
+- 支持指定那一列显示展开按钮（column.expandable），只会在第一个设置的列上显示
 
 ## NEWS
 
@@ -10,7 +11,7 @@ v2.0 发布，详见 [官方文档](https://ali-react-table.js.org/docs/changelo
 
 ## 安装
 
-`npm install ali-react-table`
+`npm install react-magic-table`
 
 ## 特点
 

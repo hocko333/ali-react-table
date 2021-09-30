@@ -1,7 +1,7 @@
 {
-  "name": "ali-react-table",
+  "name": "react-magic-table",
   "version": "2.6.1",
-  "description": "高性能 React 表格组件",
+  "description": "高性能 React 表格组件（基于 ali-react-table）",
   "sideEffects": false,
   "module": "dist/ali-react-table.esm.js",
   "main": "dist/ali-react-table.js",
@@ -9,12 +9,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alibaba/ali-react-table.git"
+    "url": "git+https://github.com/hocko333/ali-react-table.git"
   },
-  "homepage": "https://github.com/alibaba/ali-react-table",
+  "homepage": "https://github.com/hocko333/ali-react-table",
   "author": {
-    "name": "Shi Feichao",
-    "email": "842351815@qq.com"
+    "name": "hocko333",
+    "email": "chengkuan689@163.com"
   },
   "scripts": {
     "watch": "rollup --config rollup.config.js --watch",
