@@ -31,6 +31,9 @@ export interface ArtColumnStaticPart {
 
   /** 功能开关 */
   features?: { [key: string]: any }
+
+  /** 当前列是否可展开 */
+  expandable?: boolean
 }
 
 export interface ArtColumnDynamicPart {

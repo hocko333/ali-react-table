@@ -110,10 +110,15 @@ export function treeMode(opts: TreeModeFeatureOptions = {}) {
       if (columns.length === 0) {
         return columns
       }
-      const [firstCol, ...others] = columns
+      const index = columns.findIndex(e => e.expandable)
+      const expandIndex = index === -1 ? 0 : index
+      const befores = columns.slice(0, expandIndex)
+      const [expandCol] = columns.slice(expandIndex, expandIndex + 1)
+      const afters = columns.slice(expandIndex + 1)
+      // const [expandCol, ...others] = columns
 
       const render = (value: any, record: any, recordIndex: number) => {
-        const content = internals.safeRender(firstCol, record, recordIndex)
+        const content = internals.safeRender(expandCol, record, recordIndex)
         if (record[treeMetaKey] == null) {
           // 没有 treeMeta 信息的话，就返回原先的渲染结果
           return content
@@ -162,7 +167,7 @@ export function treeMode(opts: TreeModeFeatureOptions = {}) {
       }
 
       const getCellProps = (value: any, record: any, rowIndex: number) => {
-        const prevProps = internals.safeGetCellProps(firstCol, record, rowIndex)
+        const prevProps = internals.safeGetCellProps(expandCol, record, rowIndex)
         if (record[treeMetaKey] == null) {
           // 没有 treeMeta 信息的话，就返回原先的 cellProps
           return prevProps
@@ -185,15 +190,16 @@ export function treeMode(opts: TreeModeFeatureOptions = {}) {
       }
 
       return [
+        ...befores,
         {
-          ...firstCol,
+          ...expandCol,
           title: (
-            <span style={{ marginLeft: iconIndent + iconWidth + iconGap }}>{internals.safeRenderHeader(firstCol)}</span>
+            <span style={{ marginLeft: iconIndent + iconWidth + iconGap }}>{internals.safeRenderHeader(expandCol)}</span>
           ),
           render,
-          getCellProps: clickArea === 'cell' ? getCellProps : firstCol.getCellProps,
+          getCellProps: clickArea === 'cell' ? getCellProps : expandCol.getCellProps,
         },
-        ...others,
+        ...afters,
       ]
     }
   }
