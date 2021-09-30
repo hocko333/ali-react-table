@@ -1,4 +1,4 @@
-# react-magic-table
+# react-magic-tables
 
 [![NPM Package](https://img.shields.io/npm/v/ali-react-table?style=flat-square)](https://www.npmjs.org/package/ali-react-table)
 
@@ -11,7 +11,7 @@ v2.0 发布，详见 [官方文档](https://ali-react-table.js.org/docs/changelo
 
 ## 安装
 
-`npm install react-magic-table`
+`npm install react-magic-tables`
 
 ## 特点
 
